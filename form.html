@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="libs/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="admin">ADMIN</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">NHI ĐỖ
+                        <span class="caret"></span></button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#">Thông tin cá nhân</a></li>
+                                <li><a href="#">Đổi mật khẩu</a></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!-- <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+                            </div>
+                        </div>
+                    </form> -->
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Bảng điều khiển</a>
+                        <a href="#" class="list-group-item">Sản phẩm</a>
+                        <a href="#" class="list-group-item">Danh Mục</a>
+                        <a href="#" class="list-group-item">Tin tức</a>
+                        <a href="#" class="list-group-item">Menu</a>
+                        <a href="#" class="list-group-item">Cấu hình</a>
+                        <a href="#" class="list-group-item">Liên hệ</a>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="content">
+                        <h2>Thêm Sản Phẩm</h2>
+
+                        <form class="form-horizontal" action="#">
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="name">Tên sản phẩm (*)</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="name" placeholder="Tên sản phẩm">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="link">Link (*)</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="link" placeholder="link">
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="image">Hình ảnh</label>
+                                    <div class="col-sm-10">
+                                        <input type="file" class="form-control" id="image">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="desc">Mô tả</label>
+                                    <div class="col-sm-10">
+                                        <input type="text" class="form-control" id="desc" placeholder="Mô tả" style="height:100px">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="content">Nội dung</label>
+                                    <div class="col-sm-10">
+                                        <textarea id="content"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2" for="show">Ẩn hiện</label>
+                                    <div class="col-sm-10">
+                                        <input type="checkbox" id="show">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <div class="row">
+                                    <label class="control-label col-sm-2"></label>
+                                    <div class="col-sm-10">
+                                        <button type="reset" class="btn btn-primary">Reset</button>
+                                        <button type="submit" class="btn btn-primary">Thêm</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="ft-bottom text-center">
+            Admin By me
+        </div>
+    </footer>
+
+
+    <script src="libs/jQuery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="libs/ckeditor/ckeditor.js"></script>
+    <script>
+        CKEDITOR.replace('content');
+    </script>
+
+
+</body>
+
+</html>

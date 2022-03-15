@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Admin</title>
+    <link rel="stylesheet" href="libs/bootstrap-3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="libs/fontAwesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <header>
+        <div class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <p class="admin">ADMIN</p>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <div class="dropdown">
+                            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">NHI ĐỖ
+                        <span class="caret"></span></button>
+                            <ul class="dropdown-menu pull-right">
+                                <li><a href="#">Thông tin cá nhân</a></li>
+                                <li><a href="#">Đổi mật khẩu</a></li>
+                                <li><a href="#">Đăng xuất</a></li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+
+                    <!-- <form>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+								<i class="glyphicon glyphicon-search"></i>
+							</button>
+                            </div>
+                        </div>
+                    </form> -->
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">Bảng điều khiển</a>
+                        <a href="#" class="list-group-item">Sản phẩm</a>
+                        <a href="#" class="list-group-item">Danh Mục</a>
+                        <a href="#" class="list-group-item">Tin tức</a>
+                        <a href="#" class="list-group-item">Menu</a>
+                        <a href="#" class="list-group-item">Cấu hình</a>
+                        <a href="#" class="list-group-item">Liên hệ</a>
+                    </div>
+
+                </div>
+                <div class="col-md-9">
+                    <div class="content">
+                        <h2>Bảng Sản Phẩm</h2>
+
+                        <p><a href="form.html" class="btn btn-primary"><i class="fa fa-plus" aria-hidden="true"></i> Thêm Sản Phẩm</a></p>
+                        <!-- table BS -->
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>STT</th>
+                                    <th>Tên Sản Phẩm</th>
+                                    <th>Ẩn Hiện</th>
+                                    <th>Chức Năng</th>
+                                </tr>
+                            </thead>
+                            <tbody id="result">
+                            </tbody>
+                        </table>
+
+                        <div id="popup"></div>
+
+                        <!-- pagination BS phân trang  -->
+                        <ul class="pagination pagination-sm">
+                            <li><a href="#"><i class="fa fa-angle-double-left" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                            <li><a href="#"><i class="fa fa-angle-double-right" aria-hidden="true"></i></a></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script src="libs/jQuery-3.4.1/jquery-3.4.1.min.js"></script>
+    <script src="libs/bootstrap-3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/jquery.js"></script>
+    <script>
+        var a, b, c, d, e, f, g, h, i, k, l, m;
+
+        a = 'Từ ấy trong tôi bừng nắng hạ';
+        b = 'Mặt trời chân lý chói qua tim';
+        c = 'Hồn tôi là một vườn hoa lá';
+        d = 'Rất đậm hương và rộn tiếng chim';
+
+        e = 'Tôi buộc lòng tôi với mọi người';
+        f = 'Để tình trang trải với trăm nơi';
+        g = 'Để hồn tôi với bao hồn khổ';
+        h = 'Gần gũi nhau thêm mạnh khối đời';
+
+        i = 'Tôi đã là con của vạn nhà';
+        k = 'Là em của vạn kiếp phôi pha';
+        l = 'Là anh của vạn đầu em nhỏ';
+        m = 'Không áo cơm, cù bất cù bơ';
+
+        var txt = '';
+        var pp = '';
+
+        var arr = [a, b, c, d, e, f, g, h, i, k, l, m];
+
+        arr.forEach(myFunction);
+
+        function myFunction(value, index, array) {
+            txt = txt + '<tr id="tr_' + index + '"><td>' + (index + 1) + '</td><td>' + value + '</td><td><input type="checkbox"></td><td><a href="form.html"><i class="fa fa-edit" aria-hidden="true"></i> Sửa</a> <a href="javascript:;" data-toggle="modal" data-target="#myModal' + index + '"><i class="fa fa-trash" aria-hidden="true"></i> Xóa</a></td></tr>';
+
+            pp = pp + '<div id="myModal' + index + '" class="modal fade" role="dialog"><div class="modal-dialog"><div class="modal-content"><div class="modal-header"><button type="button" class="close" data-dismiss="modal">&times;</button><h4 class="modal-title">Xóa dữ liệu</h4></div><div class="modal-body"><p>Bạn có chắc chắn muốn xóa <b>' + value + '</b> ????</p></div><div class="modal-footer"><button type="button" onclick="del(' + index + ')" data-dismiss="modal" class="btn btn-danger">Xóa ngay</button><button type="button" class="btn btn-default" data-dismiss="modal">Thoát</button></div></div></div></div>';
+        }
+
+        $('#result').html(txt);
+        $('#popup').html(pp);
+
+        function del(id) {
+            $('#tr_' + id).remove();
+        }
+    </script>
+
+</body>
+
+</html>
